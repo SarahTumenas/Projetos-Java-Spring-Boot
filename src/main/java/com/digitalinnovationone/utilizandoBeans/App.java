@@ -2,6 +2,7 @@ package com.digitalinnovationone.utilizandoBeans;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 
 public class App {
     public static void main(String[] args) {
@@ -14,6 +15,9 @@ public class App {
 
         Autor autor = factory.getBean(Autor.class);
         autor.setNome("J.K. Rowlling");
+
         livro.exibir();
+
+        ((AbstractApplicationContext)factory).close();
     }
 }
