@@ -11,6 +11,9 @@ public class App {
         Livro livro = factory.getBean(Livro.class);
         livro.setNome("Harry Potter");
         livro.setCodigo("D34FD");
+
+        Autor autor = factory.getBean(Autor.class);
+        autor.setNome("J.K. Rowlling");
         livro.exibir();
     }
 }

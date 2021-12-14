@@ -11,4 +11,9 @@ public class AppConfig {
         return new Livro();
     }
     //<bean id ="livro" class="com.digitalinnovationone.utilizandoBeans.Livro"/>
+
+    @Bean
+    public AutorLivro getAutorLivro(){
+        return new Autor();
+    }
 }
